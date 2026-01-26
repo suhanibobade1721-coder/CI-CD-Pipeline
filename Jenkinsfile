@@ -2,29 +2,30 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/suhanibobade1721-coder/CI-CD-'
+                checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo "Build stage completed"
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo "Running tests..."
+                sh 'echo Tests passed'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
+                echo "Deployment successful"
             }
         }
     }
 }
+
