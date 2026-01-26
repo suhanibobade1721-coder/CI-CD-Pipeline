@@ -4,25 +4,27 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git 'https://github.com/suhanibobade1712/cicd-demo.git'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                echo "Build completed"
+                sh 'docker build -t suhanibobade/myapp:v1 .'
             }
         }
 
-        stage('Test') {
+        stage('Docker Login') {
             steps {
-                sh 'echo Tests passed'
+                withCredentials([string(credentialsId: 'dockerhub-pass', variable: 'DOCKER_PASS')]) {
+                    sh 'echo $DOCKER_PASS | docker login -u suhanibobade --password-stdin'
+                }
             }
         }
 
-        stage('Docker Build') {
+        stage('Push Image') {
             steps {
-                sh 'docker build -t myapp:v1 .'
+                sh 'docker push suhanibobade/myapp:v1'
             }
         }
     }
