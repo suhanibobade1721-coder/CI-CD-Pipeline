@@ -10,20 +10,19 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Build stage completed"
+                echo "Build completed"
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running tests..."
                 sh 'echo Tests passed'
             }
         }
 
-        stage('Deploy') {
+        stage('Docker Build') {
             steps {
-                echo "Deployment successful"
+                sh 'docker build -t myapp:v1 .'
             }
         }
     }
