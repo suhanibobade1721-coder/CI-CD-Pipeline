@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/suhanibobade1721-coder/CI-CD-Pipeline'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t suhanibobade/myapp:v2 .'
@@ -34,6 +28,3 @@ pipeline {
         }
     }
 }
-
-
-
