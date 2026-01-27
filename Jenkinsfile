@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/suhanibobade1721-coder/CI-CD-Pipeline.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t suhanibobade/myapp:v1 .'
@@ -35,4 +29,5 @@ pipeline {
         }
     }
 }
+
 
