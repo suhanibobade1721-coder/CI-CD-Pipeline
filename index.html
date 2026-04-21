@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Recipes</title>
+    <title>Yummy Food Hub</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #eef2f3;
+            color: #222;
         }
         header {
-            background-color: #ff6b6b;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
         }
         nav {
-            background-color: #333;
-            padding: 0.5rem;
+            background-color: #222;
+            padding: 0.7rem;
         }
         nav ul {
             list-style: none;
@@ -32,11 +33,12 @@
             margin: 0 1rem;
         }
         nav a {
-            color: white;
+            color: #ffcc00;
             text-decoration: none;
+            font-weight: bold;
         }
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 2rem auto;
             padding: 1rem;
         }
@@ -44,78 +46,96 @@
             background-color: white;
             margin-bottom: 2rem;
             padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
         }
         .recipe img {
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
         }
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #333;
+            background-color: #222;
             color: white;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Delicious Recipes</h1>
-        <p>Your go-to spot for easy, tasty meals!</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#recipes">Recipes</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section id="home">
-            <h2>Welcome to Delicious Recipes</h2>
-            <p>Explore our collection of simple recipes. From breakfast to dinner, we've got you covered!</p>
-        </section>
-        
-        <section id="recipes">
-            <h2>Featured Recipes</h2>
-            
-            <div class="recipe">
-                <h3>Classic Spaghetti Carbonara</h3>
-                <img src="https://via.placeholder.com/400x300?text=Spaghetti+Carbonara" alt="Spaghetti Carbonara">
-                <p><strong>Ingredients:</strong> 200g spaghetti, 100g pancetta, 2 eggs, 50g Parmesan, black pepper.</p>
-                <p><strong>Instructions:</strong> Cook pasta. Fry pancetta. Mix eggs and cheese. Combine with hot pasta. Serve with pepper.</p>
-                <p><em>Prep time: 15 mins | Serves: 2</em></p>
-            </div>
-            
-            <div class="recipe">
-                <h3>Chocolate Chip Cookies</h3>
-                <img src="https://via.placeholder.com/400x300?text=Chocolate+Chip+Cookies" alt="Chocolate Chip Cookies">
-                <p><strong>Ingredients:</strong> 1 cup butter, 1 cup sugar, 1 egg, 2 cups flour, 1 cup chocolate chips.</p>
-                <p><strong>Instructions:</strong> Cream butter and sugar. Add egg. Mix in flour and chips. Bake at 350°F for 10-12 mins.</p>
-                <p><em>Prep time: 20 mins | Makes: 24 cookies</em></p>
-            </div>
-            
-            <div class="recipe">
-                <h3>Veggie Stir-Fry</h3>
-                <img src="https://via.placeholder.com/400x300?text=Veggie+Stir-Fry" alt="Veggie Stir-Fry">
-                <p><strong>Ingredients:</strong> 2 cups mixed veggies (broccoli, bell peppers), 2 tbsp soy sauce, 1 tbsp oil, garlic.</p>
-                <p><strong>Instructions:</strong> Heat oil, add garlic and veggies. Stir-fry for 5-7 mins. Add soy sauce. Serve over rice.</p>
-                <p><em>Prep time: 10 mins | Serves: 2</em></p>
-            </div>
-        </section>
-        
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We love sharing easy recipes for busy people. Stay tuned for more!</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 Delicious Recipes. All rights reserved.</p>
-    </footer>
+
+<header>
+    <h1>Yummy Food Hub 🍴</h1>
+    <p>Quick & Easy Recipes for Everyone!</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section id="home">
+    <h2>Welcome 👋</h2>
+    <p>Discover simple and delicious recipes you can cook anytime!</p>
+</section>
+
+<section id="recipes">
+    <h2>Featured Recipes</h2>
+
+    <div class="recipe">
+        <h3>Classic Spaghetti Carbonara</h3>
+        <img src="https://via.placeholder.com/400x300?text=Spaghetti" alt="Spaghetti">
+        <p><strong>Ingredients:</strong> Pasta, eggs, cheese, pepper</p>
+        <p><strong>Instructions:</strong> Mix everything with hot pasta and serve.</p>
+        <button onclick="alert('Cooking started! 🍝')">Cook Now</button>
+    </div>
+
+    <div class="recipe">
+        <h3>Chocolate Chip Cookies</h3>
+        <img src="https://via.placeholder.com/400x300?text=Cookies" alt="Cookies">
+        <p><strong>Ingredients:</strong> Butter, sugar, flour, chocolate chips</p>
+        <p><strong>Instructions:</strong> Bake at 180°C for 10 mins.</p>
+        <button onclick="alert('Baking cookies! 🍪')">Bake Now</button>
+    </div>
+
+    <!-- NEW RECIPE ADDED -->
+    <div class="recipe">
+        <h3>Paneer Butter Masala</h3>
+        <img src="https://via.placeholder.com/400x300?text=Paneer" alt="Paneer">
+        <p><strong>Ingredients:</strong> Paneer, butter, tomato gravy, spices</p>
+        <p><strong>Instructions:</strong> Cook gravy, add paneer, simmer and serve.</p>
+        <button onclick="alert('Making Paneer! 🧀')">Try Now</button>
+    </div>
+
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This is a demo recipe website created for testing Jenkins CI/CD pipeline.</p>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Yummy Food Hub</p>
+</footer>
+
 </body>
 </html>
